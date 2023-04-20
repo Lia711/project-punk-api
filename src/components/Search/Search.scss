@@ -1,0 +1,17 @@
+* {
+    margin:0;
+    padding:0
+}
+
+.search {
+    display: flex;
+    gap:15px;
+    margin-top:5%;
+    font-size:17px;
+    font-weight:500;
+}
+
+.input {
+    border: 1px solid gray;
+    height:25px;
+}

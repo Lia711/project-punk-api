@@ -1,9 +1,12 @@
 import React from 'react'
 import "./Main.scss"
+import BeerCard from '../BeerCard/BeerCard'
 
 const Main = () => {
   return (
-    <div>Main</div>
+    <div className='beer-cards'>
+        <BeerCard />
+    </div>
   )
 }
 

@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin:0;
+}
+
+.beer-container {
+    padding:5%;
+    height: 30%;
+    width:50%;
+    border:2px solid gray;
+
+    .beer-container__image {
+        width:100px;
+    }
+
+    .beer-container__name {
+        font-size: 30px;
+    }
+
+    .beer-container__description {
+        font-size: 20px;
+    }
+}
