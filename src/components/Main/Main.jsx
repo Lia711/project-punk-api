@@ -1,11 +1,13 @@
-import React from 'react'
+import {React} from 'react'
 import "./Main.scss"
 import BeerCard from '../BeerCard/BeerCard'
 
-const Main = () => {
+const Main = (props) => {
+  const {beers} =props
+  console.log(beers)
   return (
     <div className='beer-cards'>
-        <BeerCard />
+        <BeerCard beers={beers}/>
     </div>
   )
 }

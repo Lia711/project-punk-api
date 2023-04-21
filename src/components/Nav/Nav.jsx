@@ -1,12 +1,14 @@
-import React from 'react'
+import {React} from 'react'
 import "./Nav.scss"
 import Search from '../Search/Search'
 import Filters from '../Filters/Filters'
 
-const Nav = () => {
+const Nav = (props) => {
+  const { searchTerm, handleInput } = props;
+  
   return (
     <div className='nav'>
-      <Search/>
+      <Search searchTerm={searchTerm} handleInput={handleInput}/>
       <Filters filterText={"Alcohol"}/>
       <Filters filterText={"Classic Range"}/>
       <Filters filterText={"Acidity"}/>

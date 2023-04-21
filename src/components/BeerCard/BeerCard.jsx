@@ -1,8 +1,8 @@
 import React from 'react'
 import "./BeerCard.scss"
-import beers from '../../data/beers'
 
-const BeerCard = () => {
+const BeerCard = (props) => {
+  const {beers}=props
   return beers.map((beer)=> (
     <div className='beer-container'>
         <img className='beer-container__image' src={beer.image_url} alt="beer" />

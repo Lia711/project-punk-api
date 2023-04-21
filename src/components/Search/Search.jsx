@@ -1,12 +1,19 @@
 import React from 'react'
 import "./Search.scss"
 
-const Search = () => {
+const Search = (props) => {
+
+  const { searchTerm, handleInput } = props;
+
   return (
-    <div className='search'>
-        <label className='label'>Search By Name</label>
-        <input className='input' type="text"></input>
-    </div>
+    <form className='search'>
+        <label className='label'>Search by Name</label> 
+        <input 
+        className='input' 
+        type="text"
+        value={searchTerm}
+        onInput={handleInput}></input>
+    </form>
   )
 }
 
