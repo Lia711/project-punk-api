@@ -7,7 +7,7 @@ const Search = (props) => {
 
   return (
     <form className='search'>
-        <label className='label'>Search by Name</label> 
+        <label className='label'>Search by Name:</label> 
         <input 
         className='input' 
         type="text"

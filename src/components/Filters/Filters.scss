@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Sigmar&display=swap');
+* {
+    padding:0;
+    margin:0;
+}
+
+.filters {
+    display:flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight:600;
+    padding-top:25px;
+    font-family: Azeret Mono;
+    padding-left:15px;
+
+    .label {
+        width:150px;
+    }
+
+    .checkmark {
+        
+    }
+}

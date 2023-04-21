@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Sigmar&display=swap');
 * {
     margin:0;
     padding:0
@@ -5,13 +6,20 @@
 
 .search {
     display: flex;
+    flex-direction: column;
     gap:15px;
     margin-top:5%;
-    font-size:17px;
-    font-weight:500;
+    font-size:28px;
+    font-weight:light;
+    margin-bottom:30px;
+    font-family: Sigmar;
 }
 
 .input {
     border: 1px solid gray;
-    height:25px;
+    font-size:25px;
+    height:35px;
+    background-color: rgb(242, 234, 212);
+    border: 4px solid black;
+    width:250px;
 }
