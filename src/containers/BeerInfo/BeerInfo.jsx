@@ -1,19 +1,29 @@
 import React from 'react'
 import {useParams} from "react-router-dom"
+import "./BeerInfo.scss"
 
-const BeerInfo = () => {
+
+const BeerInfo = (props) => {
+    const {beers}=props;
+    const {beerId}=useParams();
+    const currentBeer = beers.find(beer => beer.id == beerId);
+    const {name, image_url, description, first_brewed, abv, ph, food_pairing} = currentBeer
+
   return (
-    <div>
-        <img className="beer-info__img"/>
-        <h2 className="beer-info__heading">name</h2>
-        <p className='beer-info__content'>description</p>
-        <h2 className="beer-info__heading">Facts</h2>
-        <ul className="album-info__facts">
-          <li>first brewed :  </li>
-          <li>alcohol content :  </li>
-          <li>acidity :  </li>
+    <div className='beerinfo'>
+        <img src={image_url}/>
+        <div>
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <h2>Facts</h2>
+        <ul>
+          <li>first brewed: {first_brewed}</li>
+          <li>alcohol content: {abv}%</li>
+          <li>acidity: {ph}ph</li>
         </ul>
-        <p className='beer-info__content'>food pairing</p>
+        <h2>Goes well with:</h2>
+        <p>{food_pairing.join(", ")}</p>
+        </div> 
     </div>   
       
   )

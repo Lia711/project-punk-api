@@ -1,12 +1,13 @@
 import React from 'react'
 import "./BeerCard.scss"
+import {Link} from "react-router-dom"
 
 const BeerCard = (props) => {
   const {beers}=props
   return beers.map((beer)=> (
     <div className='beer-container'>
         <img className='beer-container__image' src={beer.image_url} alt="beer" />
-        <h1 className='beer-container__name'>{beer.name}</h1>
+        <Link to={`/beer/${beer.id}`} className='beer-container__name'>{beer.name}</Link>
         <p className='beer-container__description'>{beer.tagline}</p>
     </div>
 
