@@ -3,6 +3,8 @@ import "./App.scss"
 import Main from './components/Main/Main'
 import Nav from './components/Nav/Nav'
 import beers from './data/beers'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import BeerInfo from './containers/BeerInfo/BeerInfo'
 
 const App = () => {
 
@@ -17,10 +19,32 @@ const App = () => {
   })
 
   return (
-    <div className='app'>
+    <Router>
+      <div className='app'>
       <Nav handleInput={handleInput} searchTerm={searchTerm}/>
-      <Main beers={searchedBeers}/>
+      
+      <Routes>
+        
+        <Route
+        path="/"
+        element={<Main 
+          beers={searchedBeers}/>
+        }
+        />
+
+        <Route
+        path={"beer/:beerId"}
+        element={<BeerInfo beers={beers}/>
+        }
+        />
+        
+
+
+      </Routes>
+
     </div>
+    </Router>
+    
   )
 }
 

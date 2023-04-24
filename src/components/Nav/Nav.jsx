@@ -12,6 +12,7 @@ const Nav = (props) => {
       <Filters filterText={"Alcohol"}/>
       <Filters filterText={"Classic Range"}/>
       <Filters filterText={"Acidity"}/>
+      <button>Home</button>
     </div>
   )
 }

@@ -9,20 +9,20 @@
     border:8px solid black;
     background-color: rgb(238, 221, 201);
     height:400px;
-    width:22%;
+    width:240px;
 
     .beer-container__image {
-        height:180px;
+        height:220px;
         margin:auto;
     }
 
     .beer-container__name {
         padding-top:10px;
-        font-size: 25px;
+        font-size: 26px;
     }
 
     .beer-container__description {
         padding-top:10px;
-        font-size: 18px;
+        font-size: 20px;
     }
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Sigmar&display=swap');
+
 * {
     margin:0;
     padding:0
@@ -10,4 +12,20 @@
     padding:20px;
     height:320px;
     max-width:400px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+        background-color: rgb(217, 195, 129);
+        color:black;
+        border: 3px solid black;
+        border-radius: 10px;
+        font-size: 26px;
+        font-family: Azeret Mono;
+        font-weight: 600;
+        width:100px;
+        padding:7px;
+        margin-top:15%;
+    }
 }

@@ -7,7 +7,7 @@ const BeerCard = (props) => {
     <div className='beer-container'>
         <img className='beer-container__image' src={beer.image_url} alt="beer" />
         <h1 className='beer-container__name'>{beer.name}</h1>
-        <p className='beer-container__description'>{beer.description}</p>
+        <p className='beer-container__description'>{beer.tagline}</p>
     </div>
 
   ))
