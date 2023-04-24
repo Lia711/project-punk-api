@@ -1,4 +1,5 @@
 import {React} from 'react'
+import { Link } from 'react-router-dom'
 import "./Nav.scss"
 import Search from '../Search/Search'
 import Filters from '../Filters/Filters'
@@ -12,7 +13,7 @@ const Nav = (props) => {
       <Filters filterText={"Alcohol"}/>
       <Filters filterText={"Classic Range"}/>
       <Filters filterText={"Acidity"}/>
-      <button>Home</button>
+      <Link className="button" to="/">Home</Link>  
     </div>
   )
 }
