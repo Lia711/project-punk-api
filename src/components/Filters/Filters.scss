@@ -7,17 +7,15 @@
 .filters {
     display:flex;
     justify-content: space-between;
-    font-size: 25px;
+    font-size: 22px;
     font-weight:600;
-    padding-top:25px;
+    padding-top:20px;
     font-family: Azeret Mono;
     padding-left:15px;
 
     .label {
-        width:150px;
+        width:130px;
     }
 
-    .checkmark {
-        
-    }
+    
 }
