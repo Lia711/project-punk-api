@@ -12,17 +12,17 @@ const BeerInfo = (props) => {
   return (
     <div className='beerinfo'>
         <img src={image_url}/>
-        <div>
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <h2>Facts</h2>
-        <ul>
-          <li>first brewed: {first_brewed}</li>
-          <li>alcohol content: {abv}%</li>
-          <li>acidity: {ph}ph</li>
-        </ul>
-        <h2>Goes well with:</h2>
-        <p>{food_pairing.join(", ")}</p>
+        <div className='content'>
+          <h2>{name}</h2>
+          <p>{description}</p>
+          <h2>Facts</h2>
+          <ul>
+            <li>first brewed: {first_brewed}</li>
+            <li>alcohol content: {abv}%</li>
+            <li>acidity: {ph}ph</li>
+          </ul>
+          <h2>Goes well with:</h2>
+          <p>{food_pairing.join(", ")}</p>
         </div> 
     </div>   
       

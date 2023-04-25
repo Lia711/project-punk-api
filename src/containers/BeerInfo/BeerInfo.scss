@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Sigmar&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -5,11 +7,22 @@
 .beerinfo {
     display: flex;
     margin:5%;
+    padding:3%;
+    border: 10px solid black;
+    background-color: rgb(238, 221, 201);
 
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap:5%;
+       font-size: 18px;
+       font-family: Azeret Mono;
+    }
 
     img {
-        width:200px;
-        margin-right: 5%;
+        height:400px;
+        margin-right:10%;
+        margin-left:5%;
 
     }
 }
