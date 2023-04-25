@@ -3,7 +3,9 @@ import "./BeerCard.scss"
 import {Link} from "react-router-dom"
 
 const BeerCard = (props) => {
+
   const {beers}=props
+  console.log(beers)
   return beers.map((beer)=> (
     <div className='beer-container'>
         <img className='beer-container__image' src={beer.image_url} alt="beer" />

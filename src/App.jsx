@@ -8,7 +8,27 @@ import BeerInfo from './containers/BeerInfo/BeerInfo'
 
 const App = () => {
 
+  /*
+
+  const [beers, setBeers] = useState();
+  const getBeers = async () => {
+    const url="https://api.punkapi.com/v2/";
+    const response = await fetch(url)
+    const data = await response.json()
+    setBeers(data)
+    console.log(data)
+  }
+  */
+
+
+
   const [searchTerm, setSearchTerm]=useState("")
+  const [useAlcoholFilter, setUseAlcoholFilter]=useState(false)
+
+  const toggleAlcoholFilter=()=>{
+    setUseAlcoholFilter(!useAlcoholFilter);
+    
+  }
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value)
@@ -21,13 +41,13 @@ const App = () => {
   return (
     <Router>
       <div className='app'>
-      <Nav handleInput={handleInput} searchTerm={searchTerm}/>
+      <Nav handleInput={handleInput} searchTerm={searchTerm} toggleAlcoholFilter={toggleAlcoholFilter}/>
       
       <Routes>
         
         <Route
         path="/"
-        element={<Main 
+        element={<Main alcohol={useAlcoholFilter}
           beers={searchedBeers}/>
         }
         />
@@ -37,8 +57,6 @@ const App = () => {
         element={<BeerInfo beers={beers}/>
         }
         />
-        
-
 
       </Routes>
 
