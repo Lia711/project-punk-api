@@ -12,7 +12,7 @@ const Nav = (props) => {
       <Search searchTerm={searchTerm} handleInput={handleInput}/>
       <Filters filterText={"Alcohol>6%"} onClick={toggleAlcoholFilter}/>
       <Filters filterText={"Classic Range(<2010)"} />
-      <Filters filterText={"Acidity<4ph"} />
+      <Filters filterText={"Acidity<4ph"}/>
       <Link className="button" to="/">Home</Link>  
     </div>
   )

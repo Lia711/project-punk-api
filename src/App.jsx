@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react'
 import "./App.scss"
 import Main from './components/Main/Main'
 import Nav from './components/Nav/Nav'
-import beers from './data/beers'
+//import beers from './data/beers'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import BeerInfo from './containers/BeerInfo/BeerInfo'
 
