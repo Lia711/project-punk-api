@@ -6,9 +6,8 @@ const Main = (props) => {
   let filteredBeers
   const {beers, alcohol} =props
   
-  const alcoholBeers = beers.filter((beer)=>{return beer.abv>4.2
+  const alcoholBeers = beers.filter((beer)=>{return beer.abv>6
   })
-  console.log(alcoholBeers)
 
   if (alcohol==true) {
     filteredBeers=alcoholBeers

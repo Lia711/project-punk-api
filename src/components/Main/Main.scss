@@ -5,6 +5,10 @@
 
 .beer-cards {
     margin-left: 10%;
-    display: flex; 
-    gap:40px;
+    margin-top:3%;
+    margin-right:5%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap:60px;
+    
 }
