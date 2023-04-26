@@ -11,6 +11,8 @@ const App = () => {
   const [beers, setBeers] = useState([]);
   const [searchTerm, setSearchTerm]=useState("")
   const [useAlcoholFilter, setUseAlcoholFilter]=useState(false)
+  const [useYearFilter, setUseYearFilter]=useState(false)
+  const [useAcidityFilter, setUseAcidityFilter]=useState(false)
 
   const getBeers = async () => {
     const url="https://api.punkapi.com/v2/beers";
@@ -27,6 +29,8 @@ const App = () => {
     getBeers();
   },[])
 
+  console.log(beers)
+
   const handleInput = (event) => {
     setSearchTerm(event.target.value)
   }
@@ -35,16 +39,24 @@ const App = () => {
     setUseAlcoholFilter(!useAlcoholFilter);
   }
 
+  const toggleYearFilter=()=>{
+    setUseYearFilter(!useYearFilter);
+  }
+
+  const toggleAcidityFilter=()=>{
+    setUseAcidityFilter(!useAcidityFilter);
+  }
+
   return (
     <Router>
       <div className='app'>
-      <Nav handleInput={handleInput} searchTerm={searchTerm} toggleAlcoholFilter={toggleAlcoholFilter}/>
+      <Nav handleInput={handleInput} searchTerm={searchTerm} toggleAlcoholFilter={toggleAlcoholFilter} toggleYearFilter={toggleYearFilter} toggleAcidityFilter={toggleAcidityFilter}/>
       
       <Routes>
         
         <Route
         path="/"
-        element={<Main alcohol={useAlcoholFilter}
+        element={<Main alcohol={useAlcoholFilter} year={useYearFilter} acidity={useAcidityFilter}
           beers={searchedBeers}/>
         }
         />
