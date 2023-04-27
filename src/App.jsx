@@ -2,7 +2,6 @@ import {React, useState, useEffect} from 'react'
 import "./App.scss"
 import Main from './components/Main/Main'
 import Nav from './components/Nav/Nav'
-//import beers from './data/beers'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import BeerInfo from './containers/BeerInfo/BeerInfo'
 
@@ -16,11 +15,15 @@ const App = () => {
 
   const getBeers = async (alcoholFilter, yearFilter) => {
     let url="https://api.punkapi.com/v2/beers";
-    if (alcoholFilter) {
-      url+=`&abv_gt=6`
+    if (alcoholFilter&&yearFilter==false) {
+      url+=`?abv_gt=6`
     } 
 
-    if (yearFilter) {
+    if (alcoholFilter&&yearFilter) {
+      url+=`?brewed_before=01-2010&abv_gt=6`
+    }
+
+    if (yearFilter&&alcoholFilter==false) {
       url+=`?brewed_before=01-2010`
     }
 
@@ -37,7 +40,6 @@ const App = () => {
     getBeers(useAlcoholFilter, useYearFilter);
   },[useAlcoholFilter, useYearFilter])
 
-  console.log(beers)
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value)
