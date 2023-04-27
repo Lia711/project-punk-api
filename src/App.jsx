@@ -14,8 +14,16 @@ const App = () => {
   const [useYearFilter, setUseYearFilter]=useState(false)
   const [useAcidityFilter, setUseAcidityFilter]=useState(false)
 
-  const getBeers = async () => {
-    const url="https://api.punkapi.com/v2/beers";
+  const getBeers = async (alcoholFilter, yearFilter) => {
+    let url="https://api.punkapi.com/v2/beers";
+    if (alcoholFilter) {
+      url+=`&abv_gt=6`
+    } 
+
+    if (yearFilter) {
+      url+=`?brewed_before=01-2010`
+    }
+
     const response = await fetch(url)
     const data = await response.json()
     setBeers(data) 
@@ -26,8 +34,8 @@ const App = () => {
   })
   
   useEffect(()=>{
-    getBeers();
-  },[])
+    getBeers(useAlcoholFilter, useYearFilter);
+  },[useAlcoholFilter, useYearFilter])
 
   console.log(beers)
 
@@ -35,16 +43,16 @@ const App = () => {
     setSearchTerm(event.target.value)
   }
 
+  const toggleAcidityFilter=()=>{
+    setUseAcidityFilter(!useAcidityFilter);
+  }
+
   const toggleAlcoholFilter=()=>{
-    setUseAlcoholFilter(!useAlcoholFilter);
+    setUseAlcoholFilter(!useAlcoholFilter)
   }
 
   const toggleYearFilter=()=>{
-    setUseYearFilter(!useYearFilter);
-  }
-
-  const toggleAcidityFilter=()=>{
-    setUseAcidityFilter(!useAcidityFilter);
+    setUseYearFilter(!useYearFilter)
   }
 
   return (
@@ -56,7 +64,7 @@ const App = () => {
         
         <Route
         path="/"
-        element={<Main alcohol={useAlcoholFilter} year={useYearFilter} acidity={useAcidityFilter}
+        element={<Main acidity={useAcidityFilter}
           beers={searchedBeers}/>
         }
         />
