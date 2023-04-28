@@ -14,7 +14,7 @@ const Nav = (props) => {
       <Filters filterText={"Classic Range(<2010)"} onClick={toggleYearFilter}/>
       <Filters filterText={"Acidity<4ph"} onClick={toggleAcidityFilter}/>
       <Link className="button" to="/">Home</Link>  
-      <div>
+      <div className='buttons'>
         <button onClick={removePage}>Previous Page</button>
         <button onClick={addPage}>Next Page</button>
       </div>

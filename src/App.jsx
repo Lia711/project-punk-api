@@ -15,9 +15,7 @@ const App = () => {
   const [useAcidityFilter, setUseAcidityFilter]=useState(false)
 
   const getBeers = async (alcoholFilter, yearFilter, page) => {
-    let url=`https://api.punkapi.com/v2/beers`+`?page=${page}`;
-    console.log(url)
-  
+    let url=`https://api.punkapi.com/v2/beers?per_page=36`+`&page=${page}`;
 
     if (alcoholFilter) {
       url+=`&abv_gt=6`
@@ -46,7 +44,12 @@ const App = () => {
   }
 
   const removePage=()=> {
-    const count=page-1
+    let count
+    if (page!==1) {
+      count=page-1}
+      else {
+        count=page
+      }
     setPage(count)
   }
 

@@ -30,4 +30,25 @@
         padding:7px;
         margin-top:15%;
     }
+
+    .buttons {
+        display: flex;
+        gap:20px;
+
+    }
+
+    button {
+        background-color: rgb(217, 195, 129);
+        color:black;
+        border: 3px solid black;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 18px;
+        font-family: Azeret Mono;
+        font-weight: 600;
+        width:120px;
+        padding:5px;
+        margin-top:10%;
+    }
 }
