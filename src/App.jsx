@@ -15,7 +15,7 @@ const App = () => {
   const [useAcidityFilter, setUseAcidityFilter]=useState(false)
 
   const getBeers = async (alcoholFilter, yearFilter, page) => {
-    let url=`https://api.punkapi.com/v2/beers?per_page=36`+`&page=${page}`;
+    let url=`https://api.punkapi.com/v2/beers?per_page=36&page=${page}`;
 
     if (alcoholFilter) {
       url+=`&abv_gt=6`
@@ -70,7 +70,7 @@ const App = () => {
   }
 
   return (
-    <Router>
+    
       <div className='app'>
       <Nav handleInput={handleInput} searchTerm={searchTerm} toggleAlcoholFilter={toggleAlcoholFilter} toggleYearFilter={toggleYearFilter} toggleAcidityFilter={toggleAcidityFilter} addPage={addPage} removePage={removePage}/>
       
@@ -92,7 +92,7 @@ const App = () => {
       </Routes>
 
     </div>
-    </Router>
+
     
   )
 }
