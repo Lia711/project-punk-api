@@ -15,3 +15,10 @@ React application that takes data from Punk API to display the different beers.
 - containers folder includes the container of an individual beer when clicked to display more information
 - app.jsx that contains the routing of the application as well as handling the API fetch, the application of filters and search bar, and navigation between pages
 
+### Screenshots
+
+![image](https://github.com/Lia711/project-punk-api/assets/125596830/a6e843f7-ea5c-4a2b-98a8-dd96431a1829)
+![image](https://github.com/Lia711/project-punk-api/assets/125596830/70fc5409-f4ba-4814-a2a3-8557e3cbeed8)
+
+
+
